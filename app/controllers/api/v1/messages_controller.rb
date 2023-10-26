@@ -8,6 +8,12 @@ class Api::V1::MessagesController < ApplicationController
     render json: @messages
   end
 
+  def random
+    @message = Message.offset(rand(Message.count)).first
+
+    render json: @message
+  end
+
   # GET /messages/1
   def show
     render json: @message

@@ -4,6 +4,8 @@ Rails.application.routes.draw do
       resources :messages
     end
   end
+
+  get '/api/v1/messeges/random', to: 'api/v1/messages#random'
       
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
